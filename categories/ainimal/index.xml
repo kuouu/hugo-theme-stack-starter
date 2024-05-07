@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AInimal on Hugo Theme Stack Starter</title><link>https://demo.stack.jimmycai.com/categories/ainimal/</link><description>Recent content in AInimal on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/ainimal/index.xml" rel="self" type="application/rss+xml"/><item><title>Spark AR Studio 新手教學</title><link>https://demo.stack.jimmycai.com/p/spark-ar-tutorial/</link><pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/spark-ar-tutorial/</guid><description>&lt;img src="https://i.imgur.com/ixYuWA2.png" alt="Featured image of post Spark AR Studio 新手教學" />&lt;h1 id="spark-ar-studio-新手教學">Spark AR Studio 新手教學
+&lt;/h1>&lt;p>版本號：Spark AR Studio V125&lt;/p>
+&lt;hr>
+&lt;h2 id="介面介紹">介面介紹
+&lt;/h2>&lt;p>&lt;img src="https://i.imgur.com/q3Ws0Hc.png"
+loading="lazy"
+>&lt;/p>
+&lt;ul>
+&lt;li>Scene (左上)：所有在中央畫面上出現的&lt;strong>物件&lt;/strong>都可以在這裡被選取&lt;/li>
+&lt;li>Assets (左下)：使用或沒使用到的&lt;strong>素材&lt;/strong>&lt;/li>
+&lt;li>Properties (右側)：所選取物件的&lt;strong>屬性&lt;/strong> (大小、位置&lt;/li>
+&lt;/ul>
+&lt;h4 id="左側垂直工具列">左側垂直工具列：
+&lt;/h4>&lt;ul>
+&lt;li>Workspace：一些被隱藏的工作區域&lt;/li>
+&lt;li>Video：選擇手機模擬器出現的人，或使用電腦鏡頭&lt;/li>
+&lt;li>Test on device：會把測試連結傳到登入的帳號&lt;/li>
+&lt;li>Upload and Export：上傳 Spark AR Hub 跟匯出專案檔&lt;/li>
+&lt;/ul>
+&lt;h4 id="中央畫面左鍵選取物件按住右鍵拖拉改變視角滾輪縮放">中央畫面：左鍵選取物件、按住右鍵拖拉改變視角、滾輪縮放
+&lt;/h4>&lt;ul>
+&lt;li>上方三個按鈕：分別代表移動所選取物件的位置、角度、大小&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="物件-object-介紹">物件 (Object) 介紹
+&lt;/h2>&lt;p>&lt;img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fac0009d3-8c37-43fd-b4f7-d251c809f0f6%2FUntitled.png?table=block&amp;amp;id=6671696d-9c7e-4a95-8e9a-3b8b8ee673de&amp;amp;width=3070&amp;amp;userId=7af45ef0-62e9-49d2-a2aa-35ff33d00963&amp;amp;cache=v2"
+loading="lazy"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>新增物件：Scene 跟 Assets 中間有個 &lt;strong>＋Add Object&lt;/strong>，或是在你想加東西的地方按右鍵新增 (注意物件的層級)&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="facetracker">faceTracker
+&lt;/h3>&lt;p>用來偵測臉部的物件，可以在它下方加&lt;strong>子物件&lt;/strong> (ex：臉部裝飾、平面、3D 物件) 來達到讓東西跟著臉部一起動的效果，因此大多數 IG 濾鏡都會用到它。&lt;/p>
+&lt;h3 id="face-mesh">Face Mesh
+&lt;/h3>&lt;p>類似於面具的物件，大多會放在 faceTracker 之下，可以用來做&lt;strong>美肌效果 (retouch)&lt;/strong>、化妝、臉部彩繪等。&lt;/p>
+&lt;h3 id="plane">Plane
+&lt;/h3>&lt;p>一個平面，放在 faceTracker 之下可以用來做隨機選擇器的平面，或擺放任何需要跟著頭部動作的圖片。&lt;/p>
+&lt;hr>
+&lt;h2 id="物件的外觀--material--texture">物件的外觀 —— Material &amp;amp; Texture
+&lt;/h2>&lt;p>新增一個物件在濾鏡中是&lt;strong>不會顯示任何東西的&lt;/strong>，儘管在 Spark AR Studio 中會有黑白底作為提示，可是實際上那會是透明的！&lt;/p>
+&lt;p>我們需要給物件一層皮，也就是 &lt;strong>Material&lt;/strong> (素材)&lt;/p>
+&lt;p>但 Material 預設會是灰色的，也不太可能是我們要的結果。因此我們還需要將我們想要的圖片貼上，也就是 &lt;strong>Texture&lt;/strong> (質地)&lt;/p>
+&lt;p>雙擊剛剛做的 material0 進去，右側版面看到 Shader Properties &amp;gt; Texture，選擇 New Texture 並匯入要用到的圖片檔。&lt;/p>
+&lt;p>&lt;img src="https://i.imgur.com/IP8522Z.png"
+loading="lazy"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>Material 與 Texture 都會放在左下方工作區，建議要將他個別命名，不然當東西一多起來看縮圖會看到眼睛脫窗&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="測試及上傳-spark-ar-hub">測試及上傳 Spark AR Hub
+&lt;/h2>&lt;p>&lt;img src="https://i.imgur.com/hvz9Cn2.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>中間那個按鈕可以讓你先在手機上測試，而下面的按鈕就是上傳 Spark AR Hub 了。&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.facebook.com/sparkarhub/dashboard/" target="_blank" rel="noopener"
+>Spark AR Hub&lt;/a> 是管理該帳號內所有濾鏡的平台，提交審查動作必須在那裡完成。此外，那裡還可以編輯濾鏡資訊、觀看使用次數等，可以自己去看看還有什麼可以操作的地方。&lt;/p>
+&lt;p>提交審查所需要的東西有：&lt;/p>
+&lt;ul>
+&lt;li>濾鏡名稱及 icon&lt;/li>
+&lt;li>範例影片&lt;/li>
+&lt;li>濾鏡發佈排程&lt;/li>
+&lt;li>類別、關鍵字 (選填)&lt;/li>
+&lt;/ul>
+&lt;p>然後注意他有一堆&lt;a class="link" href="https://sparkar.facebook.com/ar-studio/learn/publishing/spark-ar-review-policies" target="_blank" rel="noopener"
+>&lt;strong>規範&lt;/strong>&lt;/a>，如果不小心違反了就得重新提交審查，有夠麻煩= =&lt;/p>
+&lt;hr>
+&lt;h2 id="濾鏡實作--成大競爭力">濾鏡實作 —— &lt;em>成大競爭力&lt;/em>
+&lt;/h2>&lt;p>![](&lt;a class="link" href="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2c321cc4-a19d-4f0f-a1c9-bf9509a07db1%2FScreenshot_20210203_050415_com.facebook.orca.jpg?table=block&amp;amp;id=be135b7f-23ce-4375-9b70-cd87c3ce15b3&amp;amp;width=3070&amp;amp;userId=7af45ef0-62e9-49d2-a2aa-35ff33d00963&amp;amp;cache=v2" target="_blank" rel="noopener"
+>https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2c321cc4-a19d-4f0f-a1c9-bf9509a07db1%2FScreenshot_20210203_050415_com.facebook.orca.jpg?table=block&amp;id=be135b7f-23ce-4375-9b70-cd87c3ce15b3&amp;width=3070&amp;userId=7af45ef0-62e9-49d2-a2aa-35ff33d00963&amp;cache=v2&lt;/a> =200x)&lt;/p>
+&lt;blockquote>
+&lt;p>「遠見」率先公布「2021企業最愛大學生排行榜」，成大創下此一調查的七連霸，台大蟬聯亞軍，第三、四、五名分別為台科大、清大、交&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;a class="link" href="https://drive.google.com/drive/folders/1XyUKFDRKYmZ-fr-apdZToJfSgVRYauqL?usp=sharing" target="_blank" rel="noopener"
+>&lt;strong>👉 素材下載區 👈&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>可以先想想這個濾鏡大概用了什麼物件再下去做，圖片中可以看到臉上有兩個印章、頭上有字、美肌，且都會跟著頭部轉動&lt;/p>
+&lt;ul>
+&lt;li>臉上的印章 → faceMesh&lt;/li>
+&lt;li>美肌 → faceMesh&lt;/li>
+&lt;li>頭上的字 → plane&lt;/li>
+&lt;li>跟著頭轉 → faceTracker&lt;/li>
+&lt;/ul>
+&lt;p>根據上面觀察，這個濾鏡的架構如下 (注意縮排的關係)：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">- faceTracker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - faceMesh (美肌)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - faceMesh (印章)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - plane (文字)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>事不宜遲，那就先加個 &lt;a class="link" href="https://hackmd.io/@kuouu/ar-note1#faceTracker" target="_blank" rel="noopener"
+>faceTracker&lt;/a> 到 Scene 裡面吧！&lt;/p>
+&lt;hr>
+&lt;h3 id="美肌-retouch">美肌 (retouch)
+&lt;/h3>&lt;p>新增完 faceTracker 之後，我們先來做濾鏡幾乎必備的美肌 (retouch) 吧！&lt;/p>
+&lt;p>右鍵點擊 faceTracker 並新增一個 &lt;strong>&lt;a class="link" href="https://hackmd.io/@kuouu/ar-note1#Face-Mesh" target="_blank" rel="noopener"
+>faceMesh&lt;/a>&lt;/strong>，並在 faceMesh 中新增一個 &lt;strong>material&lt;/strong> ，並雙擊進入 material0 中。&lt;/p>
+&lt;p>material 中最上方應該會有一個屬性叫做 Shader Type，選擇 &lt;strong>Retouching&lt;/strong>&lt;/p>
+&lt;p>如果需要，下方的 Skin Smoothing 可以調整美肌強度。&lt;/p>
+&lt;p>&lt;img src="https://cdn-images-1.medium.com/v2/resize:fit:1600/0*jBobFjUXeb7Q506o"
+loading="lazy"
+>&lt;/p>
+&lt;p>那我們就完成第一步了，耶！😆&lt;/p>
+&lt;hr>
+&lt;h3 id="印章-臉部彩繪">印章 (臉部彩繪)
+&lt;/h3>&lt;p>接下來處理印章的部分，但其實跟上方 &lt;em>&lt;a class="link" href="https://hackmd.io/@kuouu/ar-note1#%E7%89%A9%E4%BB%B6%E7%9A%84%E5%A4%96%E8%A7%80-%E2%80%94%E2%80%94-Material-amp-Texture" target="_blank" rel="noopener"
+>物件的外觀 —— Material &amp;amp; Texture&lt;/a>&lt;/em> 提到的一樣，按照&lt;strong>新增 faceMesh → 新增 material → 匯入圖片檔&lt;/strong>即可完成。&lt;/p>
+&lt;p>但電腦儲存的圖片都是平面且為四邊形，臉卻是立體且不規則的，這樣直接匯入圖片沒問題嗎？&lt;/p>
+&lt;p>於是官方提供了兩種圖片給我們做臉部彩繪的參考 (其實還有分男女，所以是 4 種)：&lt;/p>
+&lt;p>&lt;img src="https://i.imgur.com/ixYuWA2.png"
+loading="lazy"
+>&lt;/p>
+&lt;p>這次我們使用左邊的來處理，打開你任何可以編輯圖片的軟體，然後開始在你的臉上作畫，儲存完就可以安心的把圖片匯入了！&lt;/p>
+&lt;p>阿然後記得把底圖給隱藏或刪除R&lt;/p>
+&lt;p>於是我們完成了印章，也就是臉部彩繪的部分，接下來把文字放進來就完成了！&lt;/p>
+&lt;hr>
+&lt;h3 id="文字-plane位置大小調整">文字 (plane、位置大小調整)
+&lt;/h3>&lt;p>新增物件跟上面印章的操作很像，就差在新增不同種類的東西而已，這次我們要新增的是一個&lt;a class="link" href="https://hackmd.io/@kuouu/ar-note1#Plane" target="_blank" rel="noopener"
+>平面 (plane)&lt;/a>，然後按照上面提到的流程將圖片匯入&lt;/p>
+&lt;p>這時候你會發現：他的大小跟位置都不是我要的！&lt;/p>
+&lt;p>點擊 Scene 中的 plane0 之後，調整方法可以有兩種：&lt;/p>
+&lt;p>&lt;img src="https://i.imgur.com/60DiZmb.png"
+loading="lazy"
+>&lt;/p>
+&lt;ol>
+&lt;li>點擊正中央工作區的正上方三個按鈕，由左至右分別是調位置、角度、大小，利用物件上的箭頭來改變他的值。&lt;/li>
+&lt;li>右側工作區有個 Transformations 的屬性，由上至下分別代表位置、大小、角度。&lt;/li>
+&lt;/ol>
+&lt;p>第一個方法調比較直觀，第二個則是能調的比較細微。&lt;/p>
+&lt;p>調完之後濾鏡基本上是完成了，測試確定沒問題之後點擊上傳 Spark AR Hub 等他審查過了之後就大功告成啦，恭喜你！&lt;/p>
+&lt;hr>
+&lt;p>&lt;a class="link" href="https://www.instagram.com/ar/173414257514001/" target="_blank" rel="noopener"
+>&lt;strong>👉 濾鏡成品（要用手機開啟） 👈&lt;/strong>&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="參考資料及素材來源">參考資料及素材來源
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://yz.mofans.net/" target="_blank" rel="noopener"
+>印章產生器&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.texttopng.com/chinese/handwritten/handwritten/index.php" target="_blank" rel="noopener"
+>線上手寫字體產生器&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://sparkar.facebook.com/micro_site/url/?click_creative_path[0]=button&amp;amp;click_from_context_menu=true&amp;amp;country=TW&amp;amp;destination=https%3A%2F%2Flookaside.facebook.com%2Fdevelopers%2Fresources%2F%3Fid%3DFace-reference-assets-classic.zip&amp;amp;event_type=click&amp;amp;last_nav_impression_id=04CTtwONeKt4HB0eo&amp;amp;max_percent_page_viewed=100&amp;amp;max_viewport_height_px=722&amp;amp;max_viewport_width_px=1536&amp;amp;orig_http_referrer=https%3A%2F%2Fwww.google.com%2F&amp;amp;orig_request_uri=https%3A%2F%2Fsparkar.facebook.com%2Far-studio%2Flearn%2Farticles%2Fpeople-tracking%2Fface-reference-assets%2F&amp;amp;region=apac&amp;amp;scrolled=false&amp;amp;session_id=1jpRfljyH6iQoz6eF&amp;amp;site=spark_ar&amp;amp;extra_data[creative_detail]=button&amp;amp;extra_data[create_type]=button&amp;amp;extra_data[create_type_detail]=button" target="_blank" rel="noopener"
+>Face Assets&lt;/a> (點擊即下載)&lt;/li>
+&lt;/ul></description></item></channel></rss>
